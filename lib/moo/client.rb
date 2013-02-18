@@ -16,13 +16,14 @@ module Moo
       @oauth_access_token = OAuth::AccessToken.new(@oauth_consumer)
     end
 
-    def create_pack(pack, tracking_id=nil)
+    def create_pack(pack, tracking_id=nil, friendly_name=nil)
       params = {
         method: "moo.pack.createPack",
         product: pack.product_code.to_s,
         pack: pack.to_json
       }
       params[:trackingId] = tracking_id if tracking_id
+      params[:friendlyName] = friendly_name if friendly_name
       call(params)
     end
 
