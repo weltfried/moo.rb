@@ -3,7 +3,7 @@ module Moo
     class Pack
       attr_accessor :cards, :sides, :product_code, :product_version, :num_cards, :image_basket
 
-      PRODUCT_CODES = ['businesscard', 'minicard', 'postcard', 'holidaycard', 'sticker'].freeze
+      PRODUCT_CODES = ['businesscard', 'minicard', 'postcard', 'holidaycard', 'sticker', 'sticker_label'].freeze
 
       def initialize
         @cards = []
